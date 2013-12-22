@@ -1,0 +1,40 @@
+;; If your project contains a lot of files, it is advisable to enable (:disable-source-load-on-startup t)
+;; Otherwise Ensime might incur a massive lag at startup time
+;; See more information about that at http://aemoncannon.github.com/ensime/index.html
+
+(
+  :subprojects (
+    (
+      :name "sweeper-redux"
+      :module-name "sweeper-redux"
+      :depends-on-modules (
+      
+      )
+      :package "default"
+      :version "0.0.1-SNAPSHOT"
+      :compile-deps (
+        "/Users/joshua/.sbt/boot/scala-2.10.3/lib/scala-library.jar"
+      )
+      :runtime-deps (
+        "/Users/joshua/.sbt/boot/scala-2.10.3/lib/scala-library.jar"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/classes"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/classes"
+      )
+      :test-deps (
+        "/Users/joshua/.sbt/boot/scala-2.10.3/lib/scala-library.jar"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/classes"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/test-classes"
+      )
+      :source-roots (
+        "/Users/joshua/git/sweeper-redux/src/main/scala"
+        "/Users/joshua/git/sweeper-redux/src/main/java"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/src_managed/main"
+        "/Users/joshua/git/sweeper-redux/src/test/scala"
+        "/Users/joshua/git/sweeper-redux/src/test/java"
+        "/Users/joshua/git/sweeper-redux/target/scala-2.10/src_managed/test"
+      )
+      :target "/Users/joshua/git/sweeper-redux/target/scala-2.10/classes"
+      :test-target "/Users/joshua/git/sweeper-redux/target/scala-2.10/test-classes"
+    )
+  )
+)
