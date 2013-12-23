@@ -1,4 +1,4 @@
-#Sweeper-redux
+#Sweeper-redux [![Build Status](https://travis-ci.org/pensivearchitect/sweeper-redux.png)](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME])
 A Cross Platform Screenshot Utility
 
 This project is a reimplementation of a utility used by a highly specialized community in an online game that I frequent.
