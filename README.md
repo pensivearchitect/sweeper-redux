@@ -4,6 +4,7 @@ A Cross Platform Screenshot Utility
 This project is a reimplementation of a utility used by a highly specialized community in an online game that I frequent.
 
 The main reasons for the reimplementations were:
+
 1) Exteremly slow support and development by the author.
 
 2) The utility was platform dependent.
