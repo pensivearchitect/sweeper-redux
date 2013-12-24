@@ -20,16 +20,14 @@ class createWindow extends VBox with createImage {
     content = List(
       new ImageView {
         val getImage = {
-
           val currentImage: BufferedImage = getUserSelectedAreaAsImage
           def obtainedImage = returnCurrentImage(currentImage)
-
         }
         fitHeight = 300
         fitWidth = 300
         preserveRatio = true
         smooth = true
       })
+      }
   }
-}
 
