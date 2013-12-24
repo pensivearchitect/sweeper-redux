@@ -16,3 +16,5 @@ fork in run := true
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.2.3"
 
 jfxSettings
+
+org.scalastyle.sbt.ScalastylePlugin.Settings
