@@ -4,6 +4,7 @@
 /.ensime_lucene
 /target
 /project/target
+.history
 
 # sbt specific
 dist/*
