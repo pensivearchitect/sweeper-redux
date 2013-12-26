@@ -1,14 +1,9 @@
 package actorAPI
+
+import dispatch._
 import java.awt.image.BufferedImage
-import akka.event.Logging
-import akka.dispatch._
-import akka.actor.Actor
-import java.util.Calendar
-import akka.io.{ IO, Tcp }
-import akka.actor.Props
-import akka.dispatch.RequiresMessageQueue
-import akka.dispatch.BoundedMessageQueueSemantics
 import java.io._
+import java.util.Calendar
 import javax.imageio.ImageIO
 
 abstract class genericActor extends Actor
