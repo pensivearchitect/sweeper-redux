@@ -1,14 +1,15 @@
 package actorAPI
 import java.awt.image.BufferedImage
-import akka.actor._
 import akka.event.Logging
 import akka.dispatch._
-import java.utl.Calendar
+import akka.actor.Actor
+import java.util.Calendar
 import akka.io.{ IO, Tcp }
+import akka.actor.Props
+import akka.dispatch.RequiresMessageQueue
+import akka.dispatch.BoundedMessageQueueSemantics
 import java.io._
-// import akka.actor.mailbox.filebased.FileBasedMailBoxType
 import javax.imageio.ImageIO
-import system._
 
 abstract class genericActor extends Actor
   with RequiresMessageQueue[BoundedMessageQueueSemantics] {
@@ -19,13 +20,10 @@ trait ActorTraits extends genericActor {
   def actorProperties(name: String): Props = Props(classOf[genericActor], name)
 }
 
-class AsynchronousImageWriter extends ActorTraits {
+abstract class AsynchronousImageWriter extends ActorTraits {
   val calendar = Calendar.getInstance()
   val filename = (calendar.getTimeInMillis + ".png").toString
-  // I might consider writing the cons of the array atomically, hence the name of the val
-  writeDispatcher = akka.actor.mailbox.filebased.FileBasedMailBoxType
-  ImageIO.write(image, "png", new File(filename))
-  val actorDispatcher = system.actorOf(Props[actorProperties].
-    withDispatcher("writeDispatcher"), name = "dispatcher")
+  ImageIO.write(_: BufferedImage, "png", new File(filename))
+ // val actorDispatcher = // TODO: Write dispatcher
 }
 

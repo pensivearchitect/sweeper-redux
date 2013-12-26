@@ -8,7 +8,6 @@ import actorAPI._
 trait createImage { // Not sure what to call it, this is merely a placeholder
  lazy val robot = new Robot() // It would be best to lazily evaluate class instantiation to demand less of the heap
  lazy val awtException = new AWTException("I failed as a programmer and introduced a bug") // Honesty is the best policy
- lazy val calendar = Calendar.getInstance()
  lazy val createList = new ImageOperations
 
   def getUserSelectedAreaAsImage: BufferedImage = { // I've been reading too much of the Java stdlib.
@@ -24,9 +23,5 @@ trait createImage { // Not sure what to call it, this is merely a placeholder
   }
 
   // TODO: Write images asynchronously
-  def writeCurrentImage(currentImage: BufferedImage) = {
-   lazy val filename = (calendar.getTimeInMillis + ".png").toString // I am considering using map in lieu of OOP.
-    ImageIO.write(currentImage, "png", new File(filename))
-  }
 }
 
