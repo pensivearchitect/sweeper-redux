@@ -3,7 +3,7 @@ import java.awt._
 import java.awt.image.BufferedImage
 import persistentList.ImageOperations
 import scala._
-import actorAPI._
+import actorAPI.AsynchronousImageWriter
 
 trait createImage { // Not sure what to call it, this is merely a placeholder
  lazy val robot = new Robot() // It would be best to lazily evaluate class instantiation to demand less of the heap
