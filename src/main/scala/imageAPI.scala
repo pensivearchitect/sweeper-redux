@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage
 import scalafx.Includes._
 import generateImage._
 
-class createWindow extends VBox with createImage {
+class createWindow extends VBox with handleImage {
   def imageDisplay = new VBox {
     val verticalPriority = Priority.ALWAYS
     val horizontalPriority = Priority.ALWAYS
@@ -27,7 +27,8 @@ class createWindow extends VBox with createImage {
         fitWidth = 300
         preserveRatio = true
         smooth = true
+
       })
-      }
   }
+}
 
